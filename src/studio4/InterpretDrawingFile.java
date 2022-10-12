@@ -46,21 +46,27 @@ public class InterpretDrawingFile {
 		}
 		if(shape.equals("rectangle")) {
 			if(bool) {
-				StdDraw.filledRectangle(w, x, y/2, z/2);
+				StdDraw.filledRectangle(w, x, y, z/2);
 			}
 			if(!bool) {
-				StdDraw.rectangle(w, x, y/2, z/2);
+				StdDraw.rectangle(w, x, y, z/2);
 
 			}
 			
 		}
 		if(shape.equals("triangle")) {
+			double y3 = in.nextDouble();
+			double y4 = in.nextDouble();
+			double[] l1 = {w, x, y};
+			double[] l2 = {z, y3, y4};
 			if(bool) {
-				StdDraw.filledRectangle(w, x, y, z);
+
+				StdDraw.filledPolygon(l1, l2);
 
 			}
 			if(!bool) {
-				StdDraw.rectangle(w, x, y/2, z/2);
+				
+				StdDraw.polygon(l1,l2);
 			}
 			
 		}

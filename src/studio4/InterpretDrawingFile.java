@@ -31,7 +31,7 @@ public class InterpretDrawingFile {
 		double y = in.nextDouble();
 		double z = in.nextDouble();
 
-		Color mycolor = new Color(r, g, b);
+		Color mycolor = new Color(r, g, b); //194, 116, 242
 		StdDraw.setPenColor(mycolor);
 		if(shape.equals("ellipse")) {
 			if(bool) {
